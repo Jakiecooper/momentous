@@ -1,0 +1,48 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "/Users/myleskrisik/Documents/games/Momentous.tmx",
+    "expandedProjectPaths": [
+        "tiles",
+        "assets"
+    ],
+    "fileStates": {
+        "/Users/myleskrisik/Documents/games/Momentous.tmx": {
+            "scale": 2.4373,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 114.26578591063883,
+                "y": 89.23809133057071
+            }
+        },
+        "tiles/temporaryTile.tsx": {
+            "scaleInDock": 12.0518,
+            "scaleInEditor": 1
+        }
+    },
+    "last.exportedFilePath": "/Users/myleskrisik/Documents/games/momentous/levels",
+    "last.imagePath": "/Users/myleskrisik/Documents/games/momentous/assets",
+    "map.height": 23,
+    "map.lastUsedExportFilter": "Lua files (*.lua)",
+    "map.lastUsedFormat": "tmx",
+    "map.layerDataFormat": null,
+    "map.tileHeight": 8,
+    "map.tileWidth": 8,
+    "map.width": 40,
+    "openFiles": [
+        "/Users/myleskrisik/Documents/games/Momentous.tmx",
+        "tiles/temporaryTile.tsx"
+    ],
+    "project": "momentous.tiled-project",
+    "recentFiles": [
+        "tiles/temporaryTile.tsx",
+        "/Users/myleskrisik/Documents/games/Momentous.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 8,
+        "width": 8
+    }
+}
