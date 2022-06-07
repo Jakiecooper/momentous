@@ -4,8 +4,8 @@
     ],
     "extensionsPath": "extensions",
     "folders": [
-        "assets",
-        "tiles"
+        "../assets",
+        "../assets"
     ],
     "objectTypesFile": "",
     "propertyTypes": [
