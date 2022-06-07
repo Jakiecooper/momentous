@@ -3,6 +3,7 @@ require "world"
 
 function love.load()
   map = sti("testMap.lua")
+  setupWindow()
 end
 
 function love.update(dt)
@@ -10,6 +11,6 @@ function love.update(dt)
 end
 
 function love.draw()
-  setupScreen()
   map:draw(0, 0, xScale, yScale)
+  setScale()
 end
