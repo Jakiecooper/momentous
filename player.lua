@@ -1,6 +1,6 @@
-Player = {}
+player = {}
 
-function Player:load()
+function player:load()
     self.x = 100
     self.y = 0
     self.width = 20
@@ -12,19 +12,19 @@ function Player:load()
     self.friction = 3500
 
     self.physics = {}
-    self.physics.body = love.physics.newBody(World, self.x, self.y, "dynamic")
+    self.physics.body = love.physics.newBody(world, self.x, self.y, "dynamic")
     self.physics.body:setFixedRotation(true)
     self.physics.shape = love.physics.newRectangleShape(self.width, self.height)
     self.physics.fixture = love.physics.newFixture(self.physics.body, self.physics.shape)
 end
 
 
-function Player:update(dt)
+function player:update(dt)
     self:syncPhysics()
     self:move(dt)
 end
 
-function Player:move(dt)
+function player:move(dt)
     if love.keyboard.isDown("d", "right") then
         if self.xVel < self.maxSpeed then
             if self.xVel + self.acceleration * dt < self.maxSpeed then
@@ -44,12 +44,12 @@ function Player:move(dt)
     end
 end
 
-function Player:syncPhysics()
+function player:syncPhysics()
     self.x, self.y = self.physics.body:getPosition()
     self.physics.body:setLinearVelocity(self.xVel, self.yVel)
 end
 
-function Player:draw()
+function player:draw()
     love.graphics.rectangle("fill", self.x, self.y, self.width, self.height)
 
 end
