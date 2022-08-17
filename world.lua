@@ -1,20 +1,20 @@
-nativeWidth = 320
-nativeHeight = 180
-actualWidth = 2560
-actualHeight = 1440
-xScale = actualWidth/nativeWidth
-yScale = actualHeight/nativeHeight
+native_width = 320
+native_height = 180
+actual_width = 1280
+actual_height = 720
+x_scale = actual_width/native_width
+y_scale = actual_height/native_height
 
-windowFlags = {
+window_flags = {
   fullscreen = true,
   vsync = 0,
   borderless = true
 }
 
-function setScale()
-  love.graphics.scale(xScale, yScale)
+function set_scale()
+  love.graphics.scale(x_scale, y_scale)
 end
 
-function setupWindow()
-  love.window.setMode(actualWidth, actualHeight, windowFlags)
+function setup_window()
+  love.window.setMode(actual_width, actual_height, window_flags)
 end

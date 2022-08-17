@@ -9,11 +9,11 @@
     "file.lastUsedOpenFilter": "All Files (*)",
     "fileStates": {
         "testMap.tmx": {
-            "scale": 2,
-            "selectedLayer": 0,
+            "scale": 5.5184,
+            "selectedLayer": 1,
             "viewCenter": {
-                "x": 132.5,
-                "y": 125.25
+                "x": 9.876051029283857,
+                "y": 92.5086981733836
             }
         },
         "testMap.tmx#tileset": {
@@ -24,7 +24,7 @@
             "scaleInEditor": 16
         }
     },
-    "last.exportedFilePath": "/home/myleskrisik/Documents/games/momentous",
+    "last.exportedFilePath": "/Users/myleskrisik/Documents/Games/momentous/tiled",
     "last.imagePath": "/home/myleskrisik/Documents/games/momentous/assets",
     "map.height": 22,
     "map.lastUsedExportFilter": "Lua files (*.lua)",
@@ -36,6 +36,7 @@
         "testMap.tmx"
     ],
     "project": "testProject.tiled-project",
+    "property.type": "bool",
     "recentFiles": [
         "testMap.tmx",
         "testTileset.tsx"
