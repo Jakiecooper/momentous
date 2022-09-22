@@ -31,7 +31,7 @@ end
 --]]
 local function set_grounded(player, cols, cols_len)
     for i=1, cols_len do
-        if cols[i].normal.x == 0 and cols[i].normal.y == -1 then 
+        if cols[i].normal.x == 0 and cols[i].normal.y == -1 then
             player.grounded = true
             player.y_velocity = 0
             player.time_since_grounded = love.timer.getTime()
@@ -50,7 +50,7 @@ end
 --]]
 local function check_ceil_bonk(player, cols, cols_len)
     for i=1, cols_len do
-        if cols[i].normal.x == 0 and cols[i].normal.y == 1 then 
+        if cols[i].normal.x == 0 and cols[i].normal.y == 1 then
             player.y_velocity = 0
             return
         end
@@ -65,7 +65,7 @@ end
 --]]
 local function check_touching_wall(player, cols, cols_len)
     for i=1, cols_len do
-        if cols[i].normal.x == 1 or cols[i].normal.x == -1 then 
+        if cols[i].normal.x == 1 or cols[i].normal.x == -1 then
             player.touching_wall = true
             if cols[i].normal.x == 1 then player.touched_wall_direction = "left"
             else player.touched_wall_direction = "right" end
@@ -83,7 +83,7 @@ end
 --]]
 local function handle_movement(player, dt)
     if love.keyboard.isDown("d", "right") then
-        if player.grounded then player.x_velocity = player.x_velocity + (player.grounded_x_accel * dt) 
+        if player.grounded then player.x_velocity = player.x_velocity + (player.grounded_x_accel * dt)
         else player.x_velocity = player.x_velocity + (player.air_x_accel * dt) end
 
     elseif love.keyboard.isDown("a", "left") then
@@ -91,10 +91,10 @@ local function handle_movement(player, dt)
         else player.x_velocity = player.x_velocity - (player.air_x_accel * dt) end
 
     elseif player.x_velocity ~= 0 then
-        if player.x_velocity > 0 then 
+        if player.x_velocity > 0 then
             player.x_velocity = player.x_velocity - player.friction
             if player.x_velocity < 0 then player.x_velocity = 0 end
-        else 
+        else
             player.x_velocity = player.x_velocity + player.friction
             if player.x_velocity > 0 then player.x_velocity = 0 end
         end
@@ -152,7 +152,7 @@ end
 --]]
 function player:update(dt)
     if self.grounded then  cap_speed() end
-    
+
     apply_gravity(self, dt)
     handle_movement(self, dt)
     self.x = self.x + (self.x_velocity * dt)
@@ -162,7 +162,7 @@ function player:update(dt)
 
     self.x, self.y, cols, cols_len = world:move(self, self.x, self.y)
 
-    if player.x_velocity ~= 0 or player.y_velocity ~= 0 then 
+    if player.x_velocity ~= 0 or player.y_velocity ~= 0 then
         set_grounded(player, cols, cols_len)
         check_ceil_bonk(player, cols, cols_len)
         check_touching_wall(player, cols, cols_len)
